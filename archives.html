@@ -1,57 +1,169 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-  <head>
-    <title>Archiv - Alex Harlan</title>
-    <meta charset="utf-8" />
-    <link href="http://fonts.googleapis.com/css?family=Arimo:400,700|Inika" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="https://alexforrest.github.io/theme/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="https://alexforrest.github.io/theme/pastie.css" />
-    <link href="https://alexforrest.github.io/" type="application/atom+xml" rel="alternate" title="Alex Harlan Atom Feed" />
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Alex Harlan</title>
+		<meta name="description" content="">
+		<meta name="author" content="Alex Harlan">
+
+		<link rel="stylesheet" href="https://alexforrest.github.io/theme/css/foundation.css" />
+		<link rel="stylesheet" href="https://alexforrest.github.io/theme/css/pygment/monokai.css" />
+		<link rel="stylesheet" href="https://alexforrest.github.io/theme/css/custom.css" />
 
 
-  </head>
+		<script src="https://alexforrest.github.io/theme/js/modernizr.js"></script>
 
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="span8">
-<h1>Archiv </h1>
-
-<dl>
-    <dt>Tue 08 May 2018</dt>
-    <dd><a href='https://alexforrest.github.io/first-post.html'>CAASPP</a></dd>
-</dl>
-        </div>
-        <div class="span3 offset1">
-          <div class="well">
-            <ul class="nav nav-list">
-              <li class="nav-header">Blog</li>
-              <li ><a href="https://alexforrest.github.io">Index</a></li>
-              <li ><a href="https://alexforrest.github.io/tags/">Tags</a></li>
-              <li class="active"
-><a href="https://alexforrest.github.io/archives/">Archiv</a></li>
-              <li class="nav-header">Links</li>
-              <li><a href="https://getpelican.com/">Pelican</a></li>
-              <li><a href="https://python.org/">Python.org</a></li>
-              <li><a href="https://jinja.pocoo.org/">Jinja2</a></li>
-              <li><a href="#">You can modify those links in your config file</a></li>
-            </ul>
-          </div><!-- /#menu -->
-        </div>
-      </div>
-
-      <hr />
-
-      <div class="row">
-        <div class="span12">
-          <div id="about">
-            <p>Proudly powered by <a href="http://twitter.github.com/bootstrap/">bootstrap</a>, <a href="http://docs.notmyidea.org/alexis/pelican/">pelican</a>, <a href="http://python.org">python</a> and <a href="http://www.julo.ch/about/">Alex</a>!</p>
-          </div><!-- /#about -->
-        </div><!-- /#contentinfo -->
-      </div>
-    </div>
+		<!-- Feeds -->
+		<link href="https://alexforrest.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Alex Harlan Atom Feed" />
 
 
-  </body>
+		<!-- mathjax config similar to math.stackexchange -->
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			jax: ["input/TeX", "output/HTML-CSS"],
+			tex2jax: {
+				inlineMath: [ ['$', '$'] ],
+				displayMath: [ ['$$', '$$']],
+				processEscapes: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			},
+			messageStyle: "none",
+			"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+		});
+		</script>
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	</head>
+	<body>
+		<div class="off-canvas-wrap">
+			<div class="inner-wrap">
+				<!-- mobile top bar to activate nav -->
+				<nav class="tab-bar show-for-small">
+					<section class="left-small">
+						<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+					</section>
+
+					<section class="middle tab-bar-section">
+						<h1 class="title">Alex&nbsp;Harlan</h1>
+					</section>
+				</nav>
+
+				<!-- mobile side bar nav -->
+				<aside class="left-off-canvas-menu">
+					<ul class="off-canvas-list">
+						<li><a href="https://alexforrest.github.io">Home</a></li>
+						<li><label>Categories</label></li>
+							<li ><a href="https://alexforrest.github.io/category/posts.html">posts</a></li>
+
+						<li><label>Links</label></li>
+							<li><a href="https://getpelican.com/">Pelican</a></li>
+							<li><a href="https://python.org/">Python.org</a></li>
+							<li><a href="https://jinja.pocoo.org/">Jinja2</a></li>
+							<li><a href="#">You can modify those links in your config file</a></li>
+
+
+
+						<li><label>Social</label></li>
+							<li><a href="#">Another social link</a></li>
+							<li><a href="#">You can add links in your config file</a></li>
+					</ul>	
+				</aside>
+
+				<!-- top bar nav -->
+				<nav class="top-bar hide-for-small-only" data-topbar>
+					<ul class="title-area">
+						<li class="name">
+							<h1><a href="https://alexforrest.github.io/">Alex Harlan</a></h1>
+						</li>
+					</ul>
+
+					<section class="top-bar-section">
+						<ul class="left">
+								<li ><a href="https://alexforrest.github.io/category/posts.html">posts</a></li>
+						</ul>
+                        <ul class="right">                                                                                                                                           
+                                                                                                                                             
+                        </ul>  
+					</section>
+				</nav>
+
+				<!-- Main Page Content and Sidebar -->
+				<section class="main-section">
+					<div class="row">
+						<!-- Main Content -->
+						<div class="medium-9 small-12 columns" role="content">
+							<div class="row">
+								<div class="small-12 columns">
+									<h2>Archives</h2>
+								</div>
+							</div>
+	<div class="row">
+		<div class="small-10 columns small-centered">
+				<div class="row archive-year">
+					<div class="small-2 columns text-right">
+						<h3>2018</h3>
+					</div>
+				</div>
+					<div class="row archive-entry">
+						<div class="small-2 columns text-right">
+							<h5>May 08</h5>
+						</div>
+						<div class="small-10 columns">
+							<h5><a href="https://alexforrest.github.io/first-post.html">CAASPP</a></h5>
+						</div>
+					</div>
+		</div>
+	</div>
+						</div>
+						<!-- End Main Content -->
+						<!-- Sidebar -->
+						<aside class="medium-3 hide-for-small-only columns">
+							<div class="panel">
+								<h5>Links</h5>
+								<ul class="side-nav">
+									<li><a href="https://getpelican.com/">Pelican</a></li>
+									<li><a href="https://python.org/">Python.org</a></li>
+									<li><a href="https://jinja.pocoo.org/">Jinja2</a></li>
+									<li><a href="#">You can modify those links in your config file</a></li>
+								</ul>
+							</div>
+
+							<div class="panel">
+								<h5>Tags</h5>
+								<ul class="tag-cloud">
+								</ul>
+							</div>
+
+
+							<div class="panel">
+								<h5>Social</h5>
+								<ul class="side-nav">
+									<li><a href="#">Another social link</a></li>
+									<li><a href="#">You can add links in your config file</a></li>
+								</ul>
+							</div>
+						</aside>
+						<!-- End Sidebar -->
+					</div>
+
+					<!-- Footer -->
+					<footer class="row">
+						<div class="medium-9 small-12">
+							<hr/>
+							<p class="text-center">Powered by <a href="http://getpelican.com">Pelican</a> and <a href="http://foundation.zurb.com/">Zurb Foundation</a>. Theme by <a href="http://hamaluik.com">Kenton Hamaluik</a>.</p>
+						</div>
+					</footer>
+					<!-- End Footer -->
+				</section>
+				<a class="exit-off-canvas"></a>
+			</div><!--off-canvas inner-->
+		</div><!--off-canvas wrap-->
+
+		<script src="https://alexforrest.github.io/theme/js/jquery.js"></script>
+		<script src="https://alexforrest.github.io/theme/js/foundation.min.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
+	</body>
 </html>
