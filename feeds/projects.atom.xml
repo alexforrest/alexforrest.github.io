@@ -4355,7 +4355,7 @@ These are good areas for further analysis.&lt;/p&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content></entry><entry><title>Scraping Wikipedia to Analyze Artists</title><link href="https://alexforrest.github.io/category/projects/top-100-artists.html.html" rel="alternate"></link><published>2018-05-08T20:00:00-07:00</published><updated>2018-05-08T20:00:00-07:00</updated><author><name>Alex Harlan</name></author><id>tag:alexforrest.github.io,2018-05-08:/category/projects/top-100-artists.html.html</id><summary type="html">
+</content></entry><entry><title>Scraping Wikipedia to Analyze Artists</title><link href="https://alexforrest.github.io/top-100-artists.html.html" rel="alternate"></link><published>2018-05-08T20:00:00-07:00</published><updated>2018-05-08T20:00:00-07:00</updated><author><name>Alex Harlan</name></author><id>tag:alexforrest.github.io,2018-05-08:/top-100-artists.html.html</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
