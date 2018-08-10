@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Alex Harlan</title><link href="https://alexforrest.github.io/" rel="alternate"></link><link href="https://alexforrest.github.io/feeds/all.atom.xml" rel="self"></link><id>https://alexforrest.github.io/</id><updated>2018-05-08T20:00:00-07:00</updated><entry><title>Should you send your kids to charter school?</title><link href="https://alexforrest.github.io/charter.html.html" rel="alternate"></link><published>2018-05-08T20:00:00-07:00</published><updated>2018-05-08T20:00:00-07:00</updated><author><name>Alex Harlan</name></author><id>tag:alexforrest.github.io,2018-05-08:/charter.html.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Alex Harlan</title><link href="https://alexforrest.github.io/" rel="alternate"></link><link href="https://alexforrest.github.io/feeds/all.atom.xml" rel="self"></link><id>https://alexforrest.github.io/</id><updated>2018-05-08T20:00:00-07:00</updated><entry><title>Should you send your kids to charter school?</title><link href="https://alexforrest.github.io/article_1.html" rel="alternate"></link><published>2018-05-08T20:00:00-07:00</published><updated>2018-05-08T20:00:00-07:00</updated><author><name>Alex Harlan</name></author><id>tag:alexforrest.github.io,2018-05-08:/article_1.html</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -4355,7 +4355,7 @@ These are good areas for further analysis.&lt;/p&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content></entry><entry><title>Scraping Wikipedia to Analyze Artists</title><link href="https://alexforrest.github.io/top-100-artists.html.html" rel="alternate"></link><published>2018-05-08T20:00:00-07:00</published><updated>2018-05-08T20:00:00-07:00</updated><author><name>Alex Harlan</name></author><id>tag:alexforrest.github.io,2018-05-08:/top-100-artists.html.html</id><summary type="html">
+</content></entry><entry><title>Scraping Wikipedia to Analyze Artists</title><link href="https://alexforrest.github.io/top-100-artists.html" rel="alternate"></link><published>2018-05-08T20:00:00-07:00</published><updated>2018-05-08T20:00:00-07:00</updated><author><name>Alex Harlan</name></author><id>tag:alexforrest.github.io,2018-05-08:/top-100-artists.html</id><summary type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
