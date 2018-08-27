@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>The Confusion Matrix</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="./theme/css/main.css" />
+</head>
+<body>
+
+    <div class="main-nav-container">
+
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-lg-2-3">
+                <div class="main-nav">
+                    <ul class="main-nav-list">
+                        <li class="main-nav-item"><a href="./" class="pure-menu-link">Alex Harlan</a></li>
+
+                        <li class="main-nav-item active"><a href="./category/blog.html" class="pure-menu-link">Blog</a></li>
+                        <li class="main-nav-item"><a href="./category/projects.html" class="pure-menu-link">Projects</a></li>
+                    </ul>
+                </div>
+             </div>
+
+             <div class="pure-u-1 pure-u-lg-1-3"></div>
+        </div>
+
+    </div>
+
+
+<div class="page-container">
+    <div class="entry-content">
+        <div class="post-meta pure-g">
+            <div class="pure-u-3-4 meta-data">
+                <a href="./category/blog.html" class="category">Blog</a><br />
+
+                <a class="author" href="./author/alex-harlan.html">Alex Harlan</a>
+                &mdash; <abbr title="2018-05-03T00:00:00-07:00">Thu 03 May 2018</abbr>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-header-container">
+        <div class="background-image-container">
+
+            <div class="background-image-small">
+                <img src="/images/confusion_matrix.png" alt="The Confusion Matrix">
+                <div class="title-container">
+                    <h1>The Confusion Matrix</h1>
+                    <h4>Part 1</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="entry-content">
+        <article class="h-entry">
+<header>
+
+</header>
+<section content>
+<section data-field="body" class="e-content">
+<section name="bba4" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="0a05" id="0a05" class="graf graf--h3 graf--leading graf--title">Why the Confusion Matrix Should be Called the Anti-Confusion Matrix</h3><p name="72cf" id="72cf" class="graf graf--p graf-after--h3"></p><p name="926f" id="926f" class="graf graf--p graf-after--p">Whenever we are building a classification model we need to know good our model is at classifying the data we give it. A very basic way we can examine a model’s performance is by computing its accuracy. Unfortunately only looking at accuracy can give us the false idea that our model is performing well, when it isn’t. This is called the <strong class="markup--strong markup--p-strong">accuracy paradox.</strong></p><p name="1a24" id="1a24" class="graf graf--p graf-after--p">Let’s look at an example to see what I mean. Say we want to predict which babies will be born with some rare disease based on a number of features we have reason to believe could help us make this prediction. We have a dataset with 1,000 babies that were born healthy and 100 that were born with the disease. We run our model and get 90% accuracy on our test set! We are happy our model performed so well and now we go to our colleagues and tell them that we have a model that can predict this disease with 90% accuracy. Except we’d be embarrassingly wrong.</p><p name="eb8b" id="eb8b" class="graf graf--p graf-after--p">What you have done is sorted babies into the correct categories, has disease and does not have disease, 90% of the time. In fact its very possible your model predicted that all babies did not have the disease to get an accuracy score of 90%. That’s the same as guessing!</p><p name="4b4f" id="4b4f" class="graf graf--p graf-after--p">This is why the confusion matrix is important to understand. It actually helps us prevent this kind of mistake. You might even say the confusion matrix is a tool to prevent confusion about the true performance of our classification model.</p><p name="1151" id="1151" class="graf graf--p graf-after--p">In a binary classification problem we pick one of the classes to be our positive class and assign it a value of 1. Then we label the remaining class the negative class and assign it a value of 0. When we run our model on our data there are two possible outcomes for each sample in our dataset, we can either predict it correctly, or we get it wrong. Since we have two classes there are two ways to get it right and two ways to get it wrong as described in the confusion matrix below.</p><figure name="1a90" id="1a90" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 497px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 2%;"></div><img class="graf-image" data-image-id="1*aO30Iz8JLi7rCs7nbs__Qg.png" data-width="725" data-height="515" data-is-featured="true" src="https://cdn-images-1.medium.com/max/800/1*aO30Iz8JLi7rCs7nbs__Qg.png"></div></figure><p name="6b5d" id="6b5d" class="graf graf--p graf-after--figure">We call a prediction true when it is correct and false when it is not. Going back to our rare disease example we can fill in our confusion matrix with some made up data.</p><figure name="3bb9" id="3bb9" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 472px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 2%;"></div><img class="graf-image" data-image-id="1*ktHc16XHXFaGp4X8FksZrg.png" data-width="730" data-height="492" src="https://cdn-images-1.medium.com/max/800/1*ktHc16XHXFaGp4X8FksZrg.png"></div></figure><p name="8a7a" id="8a7a" class="graf graf--p graf-after--figure">In the above we have set the positive class (1) to be babies who have the disease and the negative class (0) to be babies who don’t. Like I hinted at before the above confusion matrix shows how we could achieve a 90% accuracy score without correctly predicting <em class="markup--em markup--p-em">any</em> of the babies who have the disease.</p><p name="46ab" id="46ab" class="graf graf--p graf-after--p">While a 90% accuracy score might have seemed impressive, you or I could have done just as well by guessing that all babies don’t have the disease and calling it a day.</p><p name="007a" id="007a" class="graf graf--p graf-after--p graf--trailing">This should give us some intuition on why it’s important to understand the confusion matrix, and why it should be seen as a tool to prevent confusion and not a source of it. Next we will look deeper into how we can use the confusion matrix to learn about precision and recall.</p></div></div></section>
+</section>
+</section> 
+</article>
+    </div>
+
+    <footer>
+        <div class="tags">
+            <a href="./tag/confusion-matrix.html">confusion matrix</a>
+            <a href="./tag/classification.html">classification</a>
+        </div>
+        <div class="pure-g post-footer">
+            <div class="pure-u-1 pure-u-md-1-2">
+                <div class="pure-g poster-info">
+                    <div class="pure-u-3-4">
+                        <h3 class="author-name"><a href="./author/alex-harlan.html">Alex Harlan</a></h3>
+                        <p class="author-description">
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </footer>
+
+
+</div>
+
+
+</body>
+</html>

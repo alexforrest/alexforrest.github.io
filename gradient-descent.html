@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Gradient Descent</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="./theme/css/main.css" />
+</head>
+<body>
+
+    <div class="main-nav-container">
+
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-lg-2-3">
+                <div class="main-nav">
+                    <ul class="main-nav-list">
+                        <li class="main-nav-item"><a href="./" class="pure-menu-link">Alex Harlan</a></li>
+
+                        <li class="main-nav-item active"><a href="./category/blog.html" class="pure-menu-link">Blog</a></li>
+                        <li class="main-nav-item"><a href="./category/projects.html" class="pure-menu-link">Projects</a></li>
+                    </ul>
+                </div>
+             </div>
+
+             <div class="pure-u-1 pure-u-lg-1-3"></div>
+        </div>
+
+    </div>
+
+
+<div class="page-container">
+    <div class="entry-content">
+        <div class="post-meta pure-g">
+            <div class="pure-u-3-4 meta-data">
+                <a href="./category/blog.html" class="category">Blog</a><br />
+
+                <a class="author" href="./author/alex-harlan.html">Alex Harlan</a>
+                &mdash; <abbr title="2018-08-07T00:00:00-07:00">Tue 07 August 2018</abbr>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-header-container">
+        <div class="background-image-container">
+
+            <div class="background-image-small">
+                <img src="/images/gradient.png" alt="Gradient Descent">
+                <div class="title-container">
+                    <h1>Gradient Descent</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="entry-content">
+        <article class="h-entry">
+<header>
+<h1 class="p-name"></h1>
+</header>
+
+<section data-field="body" class="e-content">
+<section name="e531" class="section section--body section--first"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="4917" id="4917" class="graf graf--h3 graf--leading graf--title"> </h3><p name="f8b6" id="f8b6" class="graf graf--p graf-after--h3">Gradient descent is a method that is commonly used in optimization problems. For instance if we want minimize the cost function of some model we might use gradient descent. </p><p name="57f1" id="57f1" class="graf graf--p graf-after--p">Two main reasons for using gradient descent:</p><ol class="postList"><li name="d382" id="d382" class="graf graf--li graf-after--p">There is no easy way to get the derivative of our function or otherwise solve for the minimum.</li><li name="df26" id="df26" class="graf graf--li graf-after--li">A way to solve for the minimum exists but it is too computationally costly as we increase the amount of data we use. </li></ol><p name="cc8b" id="cc8b" class="graf graf--p graf-after--li">As an example, a well known method for finding the minimum of a linear regression model exists using linear algebra, but when we increase the number of columns and rows in our matrix it can be too computationally expensive. </p><p name="d206" id="d206" class="graf graf--p graf-after--p">Gradient descent works by randomly selecting a point, calculating the partial derivatives to get the gradient (the vector of all partial derivatives). The gradient will always point in the direction of maximum ascent. Since we want to minimize our function all we need to do is move in the opposite direction of the gradient. We will move along this path some small amount proportional to the negative gradient, this amount is called the learning rate. We then repeat the above steps with our new point (instead of a random one). </p><p name="c532" id="c532" class="graf graf--p graf-after--p">If we choose an appropriate learning rate we should get to a point where after many iterations we either arrive at the minimum or at every step we have not made a ‘significant’ improvement, so we stop our algorithm and produce a solution. </p><figure name="51ae" id="51ae" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 571px; max-height: 427px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 1%;"></div><img class="graf-image" data-image-id="1*5lvzEusTd-ne5iUvXBhzdQ.png" data-width="571" data-height="427" src="https://cdn-images-1.medium.com/max/800/1*5lvzEusTd-ne5iUvXBhzdQ.png"></div></figure><p name="9a28" id="9a28" class="graf graf--p graf-after--figure">If we choose a learning rate that is too large however, we might end up with something like what we see below.</p><figure name="3bad" id="3bad" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 541px; max-height: 438px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 1%;"></div><img class="graf-image" data-image-id="1*VeNkoM3-2IOoIZyK8Nyziw.png" data-width="541" data-height="438" src="https://cdn-images-1.medium.com/max/800/1*VeNkoM3-2IOoIZyK8Nyziw.png"></div></figure><p name="18f5" id="18f5" class="graf graf--p graf-after--figure graf--trailing">Since our learning rate was large we completely passed over the minimum point and our solution fails to converge at the minimum. </p></div></div></section><section name="4758" class="section section--body section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><p name="f003" id="f003" class="graf graf--p graf--leading">There are a few different ways we can decide on our learning rate, the two most common choices are to set the learning rate to some fixed amount, or to decrease the size of the learning rate at each step. Typically using a fixed learning rate will be fine because as we approach the minimum our slope decreases and so our step size will naturally decrease. </p><p name="4ef4" id="4ef4" class="graf graf--p graf-after--p">Finding a cost function’s minimum can be pretty straight forward for convex functions, such as in the case of the linear regression cost function. </p><figure name="1e07" id="1e07" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 394px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 3%;"></div><img class="graf-image" data-image-id="0*klabXz2xteIYI7Mp.jpg" data-width="1280" data-height="720" src="https://cdn-images-1.medium.com/max/800/0*klabXz2xteIYI7Mp.jpg"></div></figure><p name="5959" id="5959" class="graf graf--p graf-after--figure">No matter where you start along the surface you will end up at the global minimum using gradient descent. </p><p name="af30" id="af30" class="graf graf--p graf-after--p">However some functions have minima. Below is an example of a function with one local minimum in addition to its global minimum. </p><figure name="8b62" id="8b62" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 700px; max-height: 522px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 3%;"></div><img class="graf-image" data-image-id="0*dgCiJUwPt8ZJnbHC.png" data-width="800" data-height="596" src="https://cdn-images-1.medium.com/max/800/0*dgCiJUwPt8ZJnbHC.png"></div></figure><p name="22b9" id="22b9" class="graf graf--p graf-after--figure">If we use gradient descent, depending on where we start, we may end up thinking that the local minimum is the true minimum of our function. Even worse if we get really unlucky we could land directly on the saddle point, where the derivative is zero, and gradient descent algorithm will prematurely stop. </p><p name="8532" id="8532" class="graf graf--p graf-after--p">For computational simplicity it is common to choose cost functions that are convex so that we don’t deal with the issues. </p><p name="c385" id="c385" class="graf graf--p graf--empty graf-after--p graf--trailing"><br></p></div></div></section>
+</section>
+</article>
+    </div>
+
+    <footer>
+        <div class="tags">
+            <a href="./tag/optimization.html">optimization</a>
+            <a href="./tag/gradient-descent.html">gradient descent</a>
+        </div>
+        <div class="pure-g post-footer">
+            <div class="pure-u-1 pure-u-md-1-2">
+                <div class="pure-g poster-info">
+                    <div class="pure-u-3-4">
+                        <h3 class="author-name"><a href="./author/alex-harlan.html">Alex Harlan</a></h3>
+                        <p class="author-description">
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </footer>
+
+
+</div>
+
+
+</body>
+</html>

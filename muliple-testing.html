@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Muliple Testing</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="./theme/css/main.css" />
+</head>
+<body>
+
+    <div class="main-nav-container">
+
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-lg-2-3">
+                <div class="main-nav">
+                    <ul class="main-nav-list">
+                        <li class="main-nav-item"><a href="./" class="pure-menu-link">Alex Harlan</a></li>
+
+                        <li class="main-nav-item active"><a href="./category/blog.html" class="pure-menu-link">Blog</a></li>
+                        <li class="main-nav-item"><a href="./category/projects.html" class="pure-menu-link">Projects</a></li>
+                    </ul>
+                </div>
+             </div>
+
+             <div class="pure-u-1 pure-u-lg-1-3"></div>
+        </div>
+
+    </div>
+
+
+<div class="page-container">
+    <div class="entry-content">
+        <div class="post-meta pure-g">
+            <div class="pure-u-3-4 meta-data">
+                <a href="./category/blog.html" class="category">Blog</a><br />
+
+                <a class="author" href="./author/alex-harlan.html">Alex Harlan</a>
+                &mdash; <abbr title="2018-06-12T00:00:00-07:00">Tue 12 June 2018</abbr>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-header-container">
+        <div class="background-image-container">
+
+            <div class="background-image-small">
+                <img src="/images/torture.png" alt="Muliple Testing">
+                <div class="title-container">
+                    <h1>Muliple Testing</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="entry-content">
+        <article class="h-entry">
+
+<section data-field="body" class="e-content">
+<section name="81db" class="section section--body section--first section--last"><div class="section-divider"><hr class="section-divider"></div><div class="section-content"><div class="section-inner sectionLayout--insetColumn"><h3 name="a0b6" id="a0b6" class="graf graf--h3 graf--leading graf--title"></h3><p name="382d" id="382d" class="graf graf--p graf--empty graf-after--h3"><br></p><h4 name="1d4c" id="1d4c" class="graf graf--h4 graf-after--p"><strong class="markup--strong markup--h4-strong">How Can We Test Multiple Hypotheses?</strong></h4><p name="6525" id="6525" class="graf graf--p graf-after--h4">Let’s say we have a set of hypotheses that we want to test at the same time. Our first thought might be to test each hypothesis separately, using some level of significance α. Sounds like a descent enough idea.</p><p name="1cdb" id="1cdb" class="graf graf--p graf-after--p">But let’s consider a case where we have 15 hypotheses to test, and a significance level of 0.05. What’s the probability of observing at least one significant result just due to chance? </p><p name="0bf3" id="0bf3" class="graf graf--p graf-after--p">P(at least one significant result) = 1 − P(no significant results) = 1 − (1 − 0.05)**15 ≈ 0.53. </p><p name="9c80" id="9c80" class="graf graf--p graf-after--p">So, with 15 tests being considered, we have a 53% chance of observing at least one significant result, even if all of the tests are not actually significant. That’s going to be a problem if we have many hypotheses to test. So how can we test multiple hypotheses without increasing our probability of observing a significant result just due to chance? </p><h4 name="1d24" id="1d24" class="graf graf--h4 graf-after--p"><strong class="markup--strong markup--h4-strong">Bonferroni Correction</strong></h4><p name="5777" id="5777" class="graf graf--p graf-after--h4">The Bonferroni correction is a method for correcting for this phenomenon. The significance cut-off at α/n where n is the number of tests. In our previous example, with 15 tests and α = 0.05, you’d only reject a null hypothesis if the p-value is less than 0.003333. Now if we calculate the chance of observing a significant result by chance we get, P(at least one significant result) = 1 − P(no significant results) = 1 − (1 − 0.003333)**15 ≈ 0.04885. This is much closer to our desired level of .05, it’s even a bit under so we are being conservative here.</p><h4 name="c70f" id="c70f" class="graf graf--h4 graf-after--p"><strong class="markup--strong markup--h4-strong">P-Hacking</strong></h4><p name="d2bb" id="d2bb" class="graf graf--p graf-after--h4">Failing to use the Bonferroni correction is a type of p-hacking. </p><p name="c32e" id="c32e" class="graf graf--p graf-after--p">P-hacking is the conscious or subconscious manipulation of data in a way that produces a desired p-value, typically in the form of obtaining a significant result that is not actually significant. Assuming that we are honest researchers we want to avoid p-hacking when we are performing analysis so that we don’t come to erroneous conclusions. As the saying goes, torture your data long enough and it will confess.</p><figure name="1368" id="1368" class="graf graf--figure graf-after--p"><div class="aspectRatioPlaceholder is-locked" style="max-width: 257px; max-height: 193px;"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 4%;"></div><img class="graf-image" data-image-id="1*bmx-yooH1YXvU0Gbqz-h_g.png" data-width="257" data-height="193" src="https://cdn-images-1.medium.com/max/800/1*bmx-yooH1YXvU0Gbqz-h_g.png"></div></figure><p name="ef1e" id="ef1e" class="graf graf--p graf--empty graf-after--figure graf--trailing"><br></p></div></div></section>
+</section>
+</article>
+    </div>
+
+    <footer>
+        <div class="tags">
+            <a href="./tag/p-hacking.html">p-hacking</a>
+            <a href="./tag/bonferroni-correction.html">bonferroni correction</a>
+            <a href="./tag/multiple-testing.html">multiple testing</a>
+        </div>
+        <div class="pure-g post-footer">
+            <div class="pure-u-1 pure-u-md-1-2">
+                <div class="pure-g poster-info">
+                    <div class="pure-u-3-4">
+                        <h3 class="author-name"><a href="./author/alex-harlan.html">Alex Harlan</a></h3>
+                        <p class="author-description">
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </footer>
+
+
+</div>
+
+
+</body>
+</html>
