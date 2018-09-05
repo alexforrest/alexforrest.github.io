@@ -19,8 +19,8 @@
                     <ul class="main-nav-list">
                         <li class="main-nav-item"><a href="./" class="pure-menu-link">Alex Harlan</a></li>
 
-                        <li class="main-nav-item"><a href="./category/blog.html" class="pure-menu-link">Blog</a></li>
-                        <li class="main-nav-item active"><a href="./category/projects.html" class="pure-menu-link">Projects</a></li>
+                        <li class="main-nav-item active"><a href="./category/blog.html" class="pure-menu-link">Blog</a></li>
+                        <li class="main-nav-item"><a href="./category/projects.html" class="pure-menu-link">Projects</a></li>
                     </ul>
                 </div>
              </div>
@@ -35,7 +35,7 @@
     <div class="entry-content">
         <div class="post-meta pure-g">
             <div class="pure-u-3-4 meta-data">
-                <a href="./category/projects.html" class="category">Projects</a><br />
+                <a href="./category/blog.html" class="category">Blog</a><br />
 
                 <a class="author" href="./author/alex-harlan.html">Alex Harlan</a>
                 &mdash; <abbr title="2018-05-21T00:00:00-07:00">Mon 21 May 2018</abbr>
@@ -47,7 +47,7 @@
         <div class="background-image-container">
 
             <div class="background-image-small">
-                <img src="/images/pet_in_store.jpg" alt="Finding a New Pet Store Location">
+                
                 <div class="title-container">
                     <h1>Finding a New Pet Store Location</h1>
                     <h4>Handling Outliers</h4>
@@ -1033,9 +1033,8 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="BUSINESS-AND-DATA-UNDERSTANDING">BUSINESS AND DATA UNDERSTANDING<a class="anchor-link" href="#BUSINESS-AND-DATA-UNDERSTANDING">&#182;</a></h2><p>Say we are working at a company that is looking to decide on a new store location. Our first idea might be to use sales data to predict where we should locate our new store. 
-The only problem is we are not certain we have quality data.</p>
-<p>The main decision we will be making is determining the accuracy of our data as well as idenifying outliers and treating them appropriately (ie keep them, or remove them from the data).</p>
+<h2 id="BUSINESS-AND-DATA-UNDERSTANDING">BUSINESS AND DATA UNDERSTANDING<a class="anchor-link" href="#BUSINESS-AND-DATA-UNDERSTANDING">&#182;</a></h2><p>Say we are working at a company that is looking to decide on a new store location. Our first idea might be to use sales data to predict where we should locate our new store. The only problem is we are not certain we have quality data.</p>
+<p>The purpose of this project will be determining the accuracy of our data as well as identifying outliers and treating them appropriately (ie keep them, or remove them from the data).</p>
 
 </div>
 </div>
@@ -1881,7 +1880,7 @@ Name: total_sales, dtype: object
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-Handle-the-Outliers">How to Handle the Outliers<a class="anchor-link" href="#How-to-Handle-the-Outliers">&#182;</a></h2><p>From here we see that Chenneye (2) has the greatest number of outliers. A quick search on google finds that Chenneye is the largest city in WY, and each value roughly compares to data summarized on wikipedia and Data USA. Next we analyze Casper (1) households under 18. Similarly we find that this data seem accurate, and that the population tends to be older in Casper. Next we see that Gilitte (6) has a high number of sales. This seems reasonable because it is the 3rd largest city in WY. Finally we see that the land area for Rock Springs (9) is 6620.2, which is unreasonably large (larger than Casper which is largest in WY by area). Therefore we should remove Rock Springs from our dataset.</p>
+<h2 id="How-to-Handle-the-Outliers">How to Handle the Outliers<a class="anchor-link" href="#How-to-Handle-the-Outliers">&#182;</a></h2><p>From here we see that Chenneye (2) has the greatest number of outliers. A quick search on google finds that Chenneye is the largest city in WY, and each value roughly compares to data summarized on Wikipedia and Data USA. Next, we analyze Casper (1) households under 18. Similarly, we find that this data seems accurate and that the population tends to be older in Casper. Next, we see that Gillette (6) has a high number of sales. This seems reasonable because it is the 3rd largest city in WY. Finally, we see that the land area for Rock Springs (9) is 6620.2, which is unreasonably large (larger than Casper which is largest in WY by area). Therefore we should remove Rock Springs from our dataset.</p>
 <p><a href="https://en.wikipedia.org/wiki/Wyoming#Cities_and_towns">https://en.wikipedia.org/wiki/Wyoming#Cities_and_towns</a></p>
 <p><a href="https://en.wikipedia.org/wiki/Cheyenne,_Wyoming">https://en.wikipedia.org/wiki/Cheyenne,_Wyoming</a></p>
 <p><a href="https://datausa.io/profile/geo/cheyenne-wy/">https://datausa.io/profile/geo/cheyenne-wy/</a></p>
@@ -2068,7 +2067,7 @@ Name: total_sales, dtype: object
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>While in another case we might have tried to impute the missing value or account for the missing data in some other way, here we have few data points and imputing it might significantly skew our data. In addition Rock Springs is probably not a crucial city for further analysis as our data already accounts for similarly small cities.</p>
+<p>While in another case we might have tried to impute the missing value or account for the missing data in some other way, here we have few data points and imputing it might significantly skew our data. If we have the ability to find the accurate information some way, this would be preferable, but assuming we do not we should remove it from our data set.</p>
 
 </div>
 </div>
