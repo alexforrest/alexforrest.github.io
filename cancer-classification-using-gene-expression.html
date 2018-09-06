@@ -1081,7 +1081,7 @@ h6:hover .anchor-link {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">9001</span><span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dataset_hw5.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;dataset_gene.csv&#39;</span><span class="p">)</span>
 <span class="n">msk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mf">0.5</span>
 <span class="n">data_train</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">msk</span><span class="p">]</span>
 <span class="n">data_test</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="o">~</span><span class="n">msk</span><span class="p">]</span>
@@ -2220,7 +2220,7 @@ Test score:  0.926829268292683
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Significance-of-Coefficients">Significance of Coefficients<a class="anchor-link" href="#Significance-of-Coefficients">&#182;</a></h2><p>Let's see how many of the coefficients estimated by the multiple logistic regression are significantly different from zero at a <em>significance level of 95%</em>?</p>
+<h2 id="Significance-of-Coefficients">Significance of Coefficients<a class="anchor-link" href="#Significance-of-Coefficients">&#182;</a></h2><p>Let's see how many of the coefficients estimated by the multiple logistic regression are significantly different from zero at a significance level of 95%</p>
 
 </div>
 </div>
@@ -2293,7 +2293,7 @@ Test score:  0.926829268292683
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dimensionality-Reduction-using-PCA">Dimensionality Reduction using PCA<a class="anchor-link" href="#Dimensionality-Reduction-using-PCA">&#182;</a></h2><p>PCA is a method for reducing the dimensionality of our data. We will then fit a model A reasonable approach to reduce the dimensionality of the data is to use PCA and fit a logistic regression model on the first set of components contributing to 90% of the variance in the predictors.</p>
+<h2 id="Dimensionality-Reduction-using-PCA">Dimensionality Reduction using PCA<a class="anchor-link" href="#Dimensionality-Reduction-using-PCA">&#182;</a></h2><p>PCA is a method for reducing the dimensionality of our data. To reduce the dimensionality of the data we will use PCA and fit a logistic regression model on the first set of components contributing to 90% of the variance in the predictors.</p>
 
 </div>
 </div>
@@ -2303,7 +2303,7 @@ Test score:  0.926829268292683
 <div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#find the number of components that explain 90% of variance </span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#the number of components that explain 90% of variance </span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">exp_var</span> <span class="o">=</span> <span class="mi">0</span> 
 <span class="k">while</span> <span class="n">exp_var</span> <span class="o">&lt;.</span><span class="mi">9</span><span class="p">:</span>
